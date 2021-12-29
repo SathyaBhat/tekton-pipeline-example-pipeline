@@ -4,7 +4,7 @@ kind: ServiceAccount
 metadata:
   name: pipeline-sa
 secrets:
-  - name: basic-docker-user-pass
+  - name: regcred
   - name: basic-git-app-repo-user-pass
 
 ---
