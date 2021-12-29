@@ -22,5 +22,11 @@ secretGenerator:
   type: kubernetes.io/basic-auth
   env: secrets/docker_secrets.env
 - behavior: merge
+  name: regcred
+  type: kubernetes.io/dockerconfigjson
+  files:
+    - secrets/.dockerconfigjson
+  env: secrets/docker_secrets.env
+- behavior: merge
   name: argocd-env-secret
   env: secrets/argocd_secrets.env
